@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', 'Comic Neue', cursive; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5eeea355389655.59822ff824b72.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+h1 {
+    color: #3c1c27;
+    margin-bottom: 20px;
+}
+
+.bill-display {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.bill-display h2 {
+    color: #3c1c27;
+    margin: 20px 0;
+}
+
+#total-amount {
+    font-size: 1.5em;
+    color: #008c80;
+}
+
+button {
+    background-color: #3c1c27;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #008c80;
+    transform: scale(1.05);
+}

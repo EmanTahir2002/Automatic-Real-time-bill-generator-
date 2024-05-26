@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Essentials Upload</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>School Essentials Bill Generator</h1>
+        <form action="{{ url_for('bill')}}" method="post" enctype="multipart/form-data">
+            <div class="file-upload">
+                <input type="file" name="image" id="file-upload" accept="image/*" required>
+                <label for="file-upload" class="upload-button">Choose a file</label>
+            </div>
+            <button type="submit">Generate Bill</button>
+        </form>
+        <div class="file-upload">
+            <form action="{{ url_for('live')}}">
+                <button class="upload-button">Live Stream</button>
+            </form>
+        </div>  
+    </div>
+</body>
+</html>

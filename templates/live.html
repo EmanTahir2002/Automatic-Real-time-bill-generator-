@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stream</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/live.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Live Stream</h2>
+        <!-- <video id="videoElement" autoplay playsinline></video>
+        <div class="button-container">
+            <button class="stop-button" onclick="stopStream()">Stop</button>
+            <button class="back-button" onclick="goBack()">Back</button>
+        </div> -->
+        <img class="video" src="{{ url_for('video')}}"/>
+        <div class="button-container">
+            <form action="{{ url_for('bill')}}">
+                <button class="stop-button">Stop</button>
+            </form>
+            <form action="{{ url_for('index')}}">
+                <button class="back-button">Back</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- <script>
+        // function goBack() {
+        //     window.history.back();
+        // }
+
+        // var videoStream;
+
+        // //Start the video stream from the front camera
+        // function startStream() {
+        //     navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' } })
+        //         .then(function (stream) {
+        //             var videoElement = document.getElementById('videoElement');
+        //             videoElement.srcObject = stream;
+        //             videoStream = stream;
+        //         })
+        //         .catch(function (error) {
+        //             console.log('Error accessing the camera:', error);
+        //         });
+        // }
+
+        // //Stop the video stream
+        // function stopStream() {
+        //     if (videoStream) {
+        //         var tracks = videoStream.getTracks();
+        //         tracks.forEach(function (track) {
+        //             track.stop();
+        //         });
+        //         var videoElement = document.getElementById('videoElement');
+        //         videoElement.srcObject = null;
+        //     }
+        // }
+
+        // //Start the stream as soon as the  page lands
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     startStream();
+        // });
+    </script> -->
+</body>
+</html>

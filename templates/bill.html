@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Details - School Essentials</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bill_styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Bill Details</h1>
+        <div class="bill-display">
+            <h3>Items:</h3>
+            <ul>
+                {% for item in items %}
+                <li>{{ item }}  Rs {{ prices[item] }} x{{ cart[item] }}</li>
+                {% endfor %}
+            </ul>
+            <h2>Total Amount: <span id="total-amount">Rs {{ totalAmount }}</span></h2>
+            <form action="{{ url_for('index')}}">
+                <button>New Transaction</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

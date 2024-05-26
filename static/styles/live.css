@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5eeea355389655.59822ff824b72.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 80%;
+    max-width: 600px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+.back-button, .stop-button {
+    font-size: 1em;
+    color: #fff;
+    background-color: #3c1c27;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-right: 10px;
+}
+
+.back-button:hover, .stop-button:hover {
+    background-color: #008c80;
+    transform: scale(1.05);
+}
+
+.button-container {
+    margin-top: 20px;
+}
